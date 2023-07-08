@@ -1,0 +1,25 @@
+/* .video {
+}*/
+.video__container {
+  @include centerer;
+  border: solid 1px #ececec;
+}
+
+.video__title {
+  @include accent-text;
+  margin: 0 0 26px 0;
+}
+
+.video__video {
+  margin: 0 0 35px 0;
+}
+/*.video__image {
+}
+.video__button {
+}*/
+.video__description {
+  margin: 0 0 41px 0;
+  font-size: 13px;
+  line-height: 24px;
+  color: $gray;
+}

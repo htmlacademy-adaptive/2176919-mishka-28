@@ -1,0 +1,24 @@
+.page-footer {
+  position: sticky;
+  top: 100vh;
+  background-color: $gray-back;
+}
+
+.page-footer__container {
+  @include centerer;
+}
+/*.page-footer__logo {
+}
+.page-footer__logo-image {
+}*/
+.page-footer__social-list {
+  @include reset-list;
+}
+/*.page-footer__social-item {
+}
+.page-footer__social-link {
+}
+.page-footer__social-image {
+}
+.page-footer__copyright {
+} */

@@ -1,0 +1,28 @@
+/* .catalog-products {
+}*/
+.catalog-products__intro {
+  margin-bottom: 30px;
+  padding: 73px 0 73px 0;
+  text-align: center;
+  background-color: $gray-back;
+}
+
+.catalog-products__container {
+  @include centerer;
+}
+
+.catalog-products__title {
+  @include main-title;
+  margin: 0;
+}
+
+.catalog-products__list {
+  margin: 0 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/*.catalog-products__card {
+}
+.catalog-products__modal {
+} */

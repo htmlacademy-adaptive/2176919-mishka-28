@@ -1,0 +1,14 @@
+.intro {
+  padding: 73px 30px 120px 30px;
+  background-color: $gray-back;
+  text-align: center;
+}
+
+.intro__container {
+  @include centerer;
+}
+
+.intro__title {
+  @include main-title;
+  margin: 0;
+}

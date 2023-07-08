@@ -1,0 +1,19 @@
+/* .main-navigation {
+} */
+.main-navigation__list {
+  @include reset-list;
+  margin: 0;
+}
+/* .main-navigation__item {
+} */
+.main-navigation__link {
+  @include link;
+  @include shape;
+  padding: 28px 0 26px 46px;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  border-top: solid 1px #ececec;
+}
+/* .main-navigation__list--user-navigation {
+}  */

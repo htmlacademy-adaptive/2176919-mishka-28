@@ -1,0 +1,45 @@
+.contacts {
+  padding: 28px 0 39px 0;
+}
+
+.contacts__container {
+  @include centerer;
+}
+
+.contacts__title {
+  margin: 0 0 28px 0;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.contacts__address {
+  margin: 0 0 62px 0;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 30px;
+  color: $gray;
+}
+
+.contacts__address-title {
+  margin: 0 0 28px 0;
+  display: flex;
+}
+
+.contacts__link {
+  @include link;
+  margin-left: 35px;
+}
+
+.contacts__text {
+  margin-left: 35px;
+}
+
+.contacts__feedback {
+  @include centerer;
+  @include link;
+  @include button;
+}
+
+.contacts__map {
+  margin: 0 0 42px 0;
+}

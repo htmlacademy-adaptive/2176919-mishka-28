@@ -1,0 +1,60 @@
+.modal {
+  display: none;
+  padding: 28px 0 46px;
+  width: 320px;
+  border: solid 1px #c6c6c6;
+  text-align: center;
+}
+
+.modal__container {
+  @include centerer;
+}
+
+.modal__title {
+  margin: 0 0 14px 0;
+  padding: 0 30px;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.modal__text {
+  margin: 0 0 21px 0;
+  line-height: 30px;
+}
+
+.modal__wrapper {
+  margin: 0 0 31px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.modal__button {
+  padding: 18px 22px;
+  width: 30%;
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: solid 2px rgb(68, 68, 68, 0.1);
+  background-color: $white;
+
+  &[aria-current="step"] {
+    border-color: $light-green;
+  }
+}
+
+.modal__main-button {
+  padding: 18px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $light-green;
+  border-color: transparent;
+}

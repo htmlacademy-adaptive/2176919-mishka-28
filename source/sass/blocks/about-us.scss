@@ -1,0 +1,39 @@
+.about-us {
+  padding: 31px 0 58px 0;
+}
+
+.about-us__container {
+  @include centerer;
+}
+
+.about-us__title {
+  margin: 0 0 28px 0;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.about-us__list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.about-us__item {
+  width: 260px;
+}
+/*.about-us__item--flower {
+}
+.about-us__item--scandinavian-style {
+}
+.about-us__item--like {
+}
+.about-us__item--love {
+}
+.about-us__item--is-our {
+}
+.about-us__item--present {
+} */

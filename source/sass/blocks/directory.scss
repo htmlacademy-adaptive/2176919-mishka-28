@@ -1,0 +1,46 @@
+/* .directory {
+}*/
+.directory__link {
+  @include link;
+  padding: 24px 30px 31px 30px;
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+
+  &:hover::before {
+    opacity: 0.7;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+
+  &:nth-child(even) {
+    background-color: $light-green;
+
+    &:hover {
+      background-color: #59d5bc;
+    }
+
+    &:active {
+      background-color: #59d5bc;
+    }
+  }
+
+  &:nth-child(odd) {
+    background-color: $green;
+
+    &:hover {
+      background-color: #46c1ae;
+    }
+
+    &:active {
+      background-color: #46c1ae;
+    }
+  }
+}
+/*.directory__link--interior-items {
+}
+.directory__link--kids-toys {
+} */
