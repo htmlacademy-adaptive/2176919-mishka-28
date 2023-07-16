@@ -1,39 +1,111 @@
 .about-us {
   padding: 31px 0 58px 0;
+
+  @media #{$not-mobile} {
+    padding-top: 83px;
+  }
 }
 
 .about-us__container {
   @include centerer;
+
+  @media #{$desktop-only} {
+    padding: 68px 175px 90px 175px;
+  }
 }
 
 .about-us__title {
+  @include main-title;
   margin: 0 0 28px 0;
   font-size: 25px;
-  line-height: 30px;
 }
 
 .about-us__list {
   @include reset-list;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 80px;
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
+
+
+  @media #{$not-mobile} {
+    font-size: 20px;
+    line-height: 22px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px 70px;
+  }
+
+  @media #{$desktop-only} {
+    column-gap: 15px;
+  }
 }
 
 .about-us__item {
+  display: flex;
+  align-items: flex-end;
   width: 260px;
+  height: 113px;
+  background-position: left top;
+  background-size: 55px 55px;
+  background-repeat: no-repeat;
+
+  @media #{$not-mobile} {
+    width: calc(100% / 2 - 70px / 2);
+
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:nth-child(3) {
+      order: 5;
+    }
+
+    &:nth-child(4) {
+      order: 2;
+    }
+
+    &:nth-child(5) {
+      order: 4;
+    }
+
+    &:nth-child(6) {
+      order: 6;
+    }
+  }
+
+  @media #{$desktop-only} {
+    width: calc(100% / 2 - 15px / 2);
+  }
 }
-/*.about-us__item--flower {
+
+.about-us__item--flower {
+  background-image: url("../img/stack.svg#flower");
 }
+
 .about-us__item--scandinavian-style {
+  background-image: url("../img/stack.svg#scandinavian-style");
 }
+
 .about-us__item--like {
+  background-image: url("../img/stack.svg#heart");
 }
+
 .about-us__item--love {
+  background-image: url("../img/stack.svg#ravel");
 }
+
 .about-us__item--is-our {
+  background-image: url("../img/stack.svg#rocket");
 }
+
 .about-us__item--present {
-} */
+  background-image: url("../img/stack.svg#present");
+}

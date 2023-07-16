@@ -1,22 +1,47 @@
-/* .directory {
-}*/
+.directory {
+  @include reset-list;
+}
+
 .directory__link {
   @include link;
+}
+
+.directory__item {
+  display: flex;
+  width: 100%;
   padding: 24px 30px 31px 30px;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
+  text-align: left;
+  justify-content: space-between;
 
-  &:hover::before {
+  @media #{$not-mobile} {
+    padding: 25px 33px 34px 36px;
+  }
+
+  @media #{$desktop-only} {
+    padding: 25px 35px 45px 37px;
+  }
+
+  &::after {
+    content: "";
+    width: 62px;
+    height: 62px;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
+  &:hover::after {
     opacity: 0.7;
   }
 
-  &:active::before {
+  &:active::after {
     opacity: 0.3;
   }
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
     background-color: $light-green;
 
     &:hover {
@@ -28,7 +53,7 @@
     }
   }
 
-  &:nth-child(odd) {
+  &:nth-child(even) {
     background-color: $green;
 
     &:hover {
@@ -39,8 +64,21 @@
       background-color: #46c1ae;
     }
   }
+
+  @media #{$not-mobile} {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
-/*.directory__link--interior-items {
+
+.directory__item--interior-items {
+  &::after {
+    background-image: url("../img/stack.svg#lamp");
+  }
 }
-.directory__link--kids-toys {
-} */
+
+.directory__item--kids-toys {
+  &::after {
+    background-image: url("../img/stack.svg#lego");
+  }
+}

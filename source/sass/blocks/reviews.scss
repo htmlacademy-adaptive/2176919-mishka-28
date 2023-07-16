@@ -1,18 +1,60 @@
 .reviews {
+  @include gray-stripe;
   line-height: 30px;
+
+  @media #{$not-mobile} {
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 350px 457px;
+  }
+
+  @media #{$desktop-only} {
+    @include centerer;
+  }
 }
 
 .reviews__container {
   @include centerer;
+  margin-bottom: 45px;
+
+  @media #{$not-mobile} {
+    margin-bottom: 68px;
+    display: grid;
+    grid-template-columns: 3fr, 1fr;
+    padding-top: 82px;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 67px;
+    padding: 78px 0 0 174px;
+  }
 }
 
 .reviews__title {
+  @include main-title;
   margin: 0 0 14px 0;
   font-size: 25px;
+
+  @media #{$not-mobile} {
+    margin-bottom: 38px;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 35px;
+  }
 }
 
 .reviews__slider-list {
   @include reset-list;
+
+  @media #{$not-mobile} {
+    grid-column: 1/2;
+  }
+
+  @media #{$desktop-only} {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
 }
 
 .reviews__slider-item {
@@ -27,6 +69,14 @@
 .reviews__text {
   margin: 0 0 33px 0;
   color: $gray;
+
+  @media #{$not-mobile} {
+    margin-bottom: 61px;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 44px;
+  }
 }
 
 .reviews__author {
@@ -42,22 +92,67 @@
 .reviews__button-wrapper {
   margin: 0 0 38px 0;
   display: flex;
-  justify-content: space-between;
   border: solid 1px #ececec;
   height: 52px;
+
+  @media #{$not-mobile} {
+    grid-column: 2/3;
+    border-color: transparent;
+    align-self: end;
+    padding-bottom: 15px;
+    justify-self: end;
+  }
+
+  @media #{$desktop-only} {
+    grid-row: 2/3;
+  }
 }
 
-.reviews__left {
+.reviews__button {
+  @include shape;
   cursor: pointer;
   width: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media #{$not-mobile} {
+    border-color: transparent;
+  }
 }
 
-.reviews__right {
-  cursor: pointer;
-  width: 50%;
+.reviews__button--left {
+  &::before {
+    @include arrowhead;
+  }
+
+  &::after {
+    @include arrow-shaft;
+  }
+}
+
+.reviews__button--right {
+  &::before {
+    @include arrow-shaft;
+    transform: translateX(14px);
+  }
+
+  &::after {
+    @include arrowhead;
+    transform: rotate(135deg);
+  }
 }
 
 .reviews__add {
   @include link;
   @include button;
+
+  @media #{$not-mobile} {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 175px;
+    height: 52px;
+    justify-self: end;
+  }
 }

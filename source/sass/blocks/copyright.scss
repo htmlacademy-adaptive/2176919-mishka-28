@@ -1,12 +1,30 @@
-/* .copyright {
-}*/
+.copyright {
+  padding: 22px 20px 23px 20px;
+
+  @media #{$not-mobile} {
+    padding: 0;
+  }
+}
+
 .copyright__link {
   @include link;
   font-size: 19px;
   line-height: 18px;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media #{$not-mobile} {
+    justify-content: flex-end;
+  }
 }
-/*.copyright__link-text {
+
+.copyright__link-text {
+  margin-right: 27px;
 }
+
 .copyright__link-icon {
-} */
+  @include footer-shape;
+  color: $light-green;
+}

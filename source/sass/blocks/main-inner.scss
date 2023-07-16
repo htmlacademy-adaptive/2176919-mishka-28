@@ -1,15 +1,21 @@
-/* .main-inner {
-}
-.main-inner__form {
-}
-.main-inner__catalog {
-}*/
 .main-inner__video {
   margin-bottom: 58px;
+
+  @media #{$not-mobile} {
+    margin-bottom: 64px;
+  }
 }
 
 .main-inner__order {
   @include link;
   @include button;
   margin: 0 34px 33px 34px;
+
+  @media #{$not-mobile} {
+    margin-bottom: 46px;
+  }
+
+  @media #{$desktop-only} {
+    margin: 0;
+  }
 }

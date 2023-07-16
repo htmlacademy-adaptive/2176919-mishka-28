@@ -1,8 +1,0 @@
-.delivery {
-  display: none;
-  color: $gray;
-
-  @media #{$not-mobile} {
-    display: block;
-  }
-}

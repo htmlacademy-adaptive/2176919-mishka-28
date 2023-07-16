@@ -5,57 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Сайт">
   <title>Вязание на заказ. Страница интернет магазина Мишка.</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
 </head>
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__container main-header__container--nojs">
-      <a class="main-header__logo" href="index.html" aria-current="page">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="./img/logo.svg#desktop" width="149" height="72">
-          <source media="(min-width: 768px)" srcset="./img/logo.svg#tablet" width="149" height="72">
-          <img class="main-header__logo-image" src="./img/logo.svg#mobile" alt="Логотип интернет-магазина Мишка." width="149" height="72">
-        </picture>
-      </a>
+      <nav class="main-navigation">
+        <a class="main-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="./img/logo-desktop.svg" width="149" height="72">
+            <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg" width="113" height="46">
+            <img class="main-header__image" src="./img/logo.svg#logo" alt="Логотип интернет-магазина Мишка." width="90" height="40">
+          </picture>
+        </a>
+        <div class="main-navigation__wrapper">
+          <ul class="main-navigation__list main-navigation__list--main">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="form.html" aria-current="page">Вязание на&nbsp;заказ</a>
+            </li>
+          </ul>
+          <ul class="main-navigation__list main-navigation__list--hidden">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Новые поступления</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Распродажа</a>
+            </li>
+          </ul>
+          <ul class="main-navigation__list main-navigation__list--user-navigation">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link main-navigation__link--search" href="#">
+                <span class="main-navigation__search">Поиск по&nbsp;сайту</span>
+              </a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link main-navigation__link--cart" href="#">Корзина: пока пуста</a>
+            </li>
+            <li class="main-navigation__item">
+              <p class="main-navigation__delivery">Бесплатная доставка по&nbsp;России</p>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <button class="main-header__toggle-navigation" type="button">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
-      <nav class="main-navigation">
-        <ul class="main-navigation__list">
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="form.html" aria-current="step">Вязание на&nbsp;заказ</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">Новые поступления</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">Распродажа</a>
-          </li>
-        </ul>
-        <ul class="main-navigation__list main-navigation__list--user-navigation">
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">Поиск по&nbsp;сайту</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">Корзина: пока пуста</a>
-          </li>
-        </ul>
-        <p class="delivery">Бесплатная доставка по&nbsp;России</p>
-      </nav>
     </div>
   </header>
   <main class="main-inner">
     <section class="main-inner__form form">
-      <div class="form__intro">
-        <div class="form__container">
-          <h1 class="form__main-title">Вязание на заказ</h1>
-          <p class="form__description">Мы&nbsp;будем рады воплотить в&nbsp;жизнь ваши пожелания! Заполните простую форму заказа и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы уточнить детали.</p>
-        </div>
+      <div class="form__wrapper-title">
+        <h1 class="form__main-title">Вязание на заказ</h1>
       </div>
       <form class="form__form" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="form__description">Мы&nbsp;будем рады воплотить в&nbsp;жизнь ваши пожелания! Заполните простую форму заказа и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы уточнить детали.</p>
         <fieldset class="form__group form__group--type">
           <legend class="visually-hidden">Какой аксессуар вам нужен?</legend>
           <div class="form__container">
@@ -153,13 +163,13 @@
               <li class="form__item form__item--telephone">
                 <label class="form__label-input" for="contacts-telephone">
                   <input class="form__input" type="tel" id="contacts-telephone" name="contacts-telephone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-                  <span class="form__title">Телефон:*</span>
+                  <span class="form__title">Тел</span>
                 </label>
               </li>
               <li class="form__item form__item--email">
                 <label class="form__label-input" for="contacts-email">
                   <input class="form__input" type="email" id="contacts-email" name="contacts-email" placeholder="Ваш Email*" required>
-                  <span class="form__title">E&#8209;mail:*</span>
+                  <span class="form__title">E&#8209;mail</span>
                 </label>
               </li>
             </ul>
@@ -172,8 +182,8 @@
           </div>
         </fieldset>
         <div class="form__wrapper">
-          <button class="form__button" type="submit">Отправить заказ</button>
           <p class="form__remark">*Поля обязательны для заполнения</p>
+          <button class="form__button" type="submit">Отправить заказ</button>
         </div>
       </form>
 
@@ -183,8 +193,8 @@
     <div class="page-footer__container">
       <a class="page-footer__logo" href="index.html">
         <span class="visually-hidden">Логотип интернет-магазина Мишка.</span>
-        <svg class="page-footer__logo-image" width="102" height="35">
-          <use href="./img/logo.svg#footer-logo"></use>
+        <svg class="page-footer__logo-image" width="102" height="34">
+          <use href="./img/logo.svg#logo-footer"></use>
         </svg>
       </a>
       <ul class="page-footer__social-list">
@@ -218,11 +228,12 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__link-text">Разработано</span>
           <svg class="copyright__link-icon" width="27" height="34">
-            <use href="./img/stack.svg#academy-logo"></use>
+            <use href="./img/stack.svg#htmlacademy"></use>
           </svg>
         </a>
       </div>
     </div>
   </footer>
+  <script src="./js/script.min.js"></script>
 </body>
 </html>

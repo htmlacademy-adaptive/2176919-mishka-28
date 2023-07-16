@@ -1,6 +1,18 @@
 /* .map {
 }
 .map--nojs {
-}
+}*/
 .map__image {
-} */
+  @include img;
+  width: 100%;
+  height: 454px;
+  display: block;
+
+  @media #{$not-mobile} {
+    height: 457px;
+  }
+
+  @media #{$desktop-only} {
+    width: 527px;
+  }
+}

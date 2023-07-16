@@ -1,8 +1,8 @@
 @mixin centerer {
-  margin-inline: 20px;
+  margin-inline: 30px;
 
   @media #{$not-mobile} {
-    margin-inline: 30px;
+    margin-inline: 50px;
   }
 
   @media #{$desktop-only} {
@@ -32,12 +32,26 @@
 @mixin main-title {
   font-size: 27px;
   line-height: 30px;
+
+  @media #{$not-mobile} {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media #{$desktop-only} {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 @mixin accent-text {
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
+
+  @media #{$not-mobile} {
+    font-size: 20px;
+  }
 }
 
 @mixin button {
@@ -61,6 +75,12 @@
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
+
+  @media #{$not-mobile} {
+    padding: 18px;
+    font-size: 17px;
+    line-height: 16px;
+  }
 }
 
 @mixin shape {
@@ -71,4 +91,109 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+@mixin footer-shape {
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    color: #46c1ae;
+    opacity: 0.3;
+  }
+}
+
+@mixin input-shape {
+  &:hover,
+  &:focus {
+    border-color: $light-green-decorative;
+    outline: none;
+
+    +.form__title::before {
+      background-color: $light-green-decorative;
+    }
+  }
+}
+
+@mixin gray-stripe {
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: url("../img/stack.svg#gray-stripe-mobile");
+    background-position: bottom;
+    background-size: 320px 6px;
+    background-repeat: repeat-x;
+
+    @media #{$not-mobile} {
+      height: 16px;
+      background: url("../img/stack.svg#gray-stripe-table");
+      background-size: 772px 17px;
+    }
+
+    @media #{$desktop-only} {
+      height: 22px;
+      background: url("../img/stack.svg#gray-stripe-desktop");
+      background-size: 1050px 23px;
+    }
+  }
+}
+
+@mixin white-stripe {
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background: url("../img/stack.svg#zigzag-fill-tablet");
+    background-position: bottom;
+    background-size: 770px 24px;
+  }
+
+  @media #{$desktop-only} {
+    &::after {
+      height: 34px;
+      background: url("../img/stack.svg#zigzag-fill-desktop");
+      background-size: 1250px 34px;
+    }
+  }
+}
+
+@mixin green-stripe {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $light-green-decorative;
+    margin-left: 23px;
+  }
+}
+
+@mixin arrow-shaft {
+  content: "";
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 4px;
+  background-color: #000000;
+  transform: translateX(-14px);
+}
+
+@mixin arrowhead {
+  content: "";
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  border-left: solid 4px #000000;
+  border-top: solid 4px #000000;
+  transform: rotate(-45deg);
 }
