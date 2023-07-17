@@ -87,7 +87,18 @@
     }
 
     @media #{$desktop-only} {
-      margin-right: 33px;
+      margin-right: 69px;
+    }
+  }
+
+  .main-navigation__link--stripe {
+    @media #{$desktop-only} {
+      @include vertical-striple;
+      position: relative;
+
+      &::after {
+        right: -33px;
+      }
     }
   }
 }
@@ -174,7 +185,12 @@
     }
 
     @media #{$not-mobile} {
+      @include vertical-striple;
       width: 82px;
+
+      &::after {
+        left: 0;
+      }
     }
   }
 
@@ -184,7 +200,12 @@
     }
 
     @media #{$not-mobile} {
+      @include vertical-striple;
       padding-left: 79px;
+
+      &::after {
+        left: 0;
+      }
     }
   }
 }

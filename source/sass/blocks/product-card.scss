@@ -64,6 +64,7 @@
 
 .product-card__title {
   @include accent-text;
+  @include shape;
   margin: 0 0 6px 0;
 }
 

@@ -1,6 +1,9 @@
+.main-header {
+  border-bottom: solid 1px #ececec;
+}
+
 .main-header__container {
   padding: 20px;
-  border-bottom: solid 1px #ececec;
 
   @media #{$not-mobile} {
     padding: 22px 50px 20px 50px;

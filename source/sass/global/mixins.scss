@@ -105,6 +105,8 @@
 }
 
 @mixin input-shape {
+  border-radius: 0;
+
   &:hover,
   &:focus {
     border-color: $light-green-decorative;
@@ -196,4 +198,15 @@
   border-left: solid 4px #000000;
   border-top: solid 4px #000000;
   transform: rotate(-45deg);
+}
+
+@mixin vertical-striple {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 88px;
+    background-color: rgba(0, 0, 0, 0.1);
+    top: -34px;
+  }
 }
