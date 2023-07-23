@@ -14,9 +14,29 @@
     padding: 0;
   }
 }
-/* main-header__container--nojs
 
- */
+.main-header__container--nojs {
+  padding: 0;
+
+  .main-header__toggle-navigation {
+    display: none;
+  }
+
+  .main-navigation {
+    flex-direction: column;
+
+    .main-navigation__wrapper {
+      position: relative;
+      top: 0;
+    }
+
+    .main-header__logo {
+      align-self: center;
+      padding: 22px 0;
+      height: auto;
+    }
+  }
+}
 
 .main-header__logo {
   @include shape;

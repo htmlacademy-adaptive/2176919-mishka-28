@@ -4,9 +4,8 @@
 
 .directory__link {
   @include link;
-}
-
-.directory__item {
+  cursor: pointer;
+  position: relative;
   display: flex;
   width: 100%;
   padding: 24px 30px 31px 30px;
@@ -16,6 +15,19 @@
   color: #ffffff;
   text-align: left;
   justify-content: space-between;
+
+  &:hover::before {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    content: "";
+    height: 5px;
+    width: 100%;
+  }
+
+  &:hover {
+    padding: 19px 30px 36px 30px;
+  }
 
   @media #{$not-mobile} {
     padding: 25px 33px 34px 36px;
@@ -41,6 +53,25 @@
     opacity: 0.3;
   }
 
+  &:nth-child(even) {
+    background-color: $green;
+
+    &:hover {
+      background-color: #46c1ae;
+    }
+
+    &:active {
+      background-color: #46c1ae;
+    }
+  }
+
+  @media #{$not-mobile} {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.directory__item {
   &:nth-child(odd) {
     background-color: $light-green;
 
@@ -66,19 +97,30 @@
   }
 
   @media #{$not-mobile} {
-    font-size: 20px;
-    line-height: 30px;
+    width: 100%;
   }
 }
 
 .directory__item--interior-items {
-  &::after {
-    background-image: url("../img/stack.svg#lamp");
+  .directory__link {
+    &::before {
+      background-color: #59d5bc;
+    }
+
+    &::after {
+      background-image: url("../img/stack.svg#lamp");
+    }
   }
 }
 
 .directory__item--kids-toys {
-  &::after {
-    background-image: url("../img/stack.svg#lego");
+  .directory__link {
+    &::before {
+      background-color: #46c1ae;
+    }
+
+    &::after {
+      background-image: url("../img/stack.svg#lego");
+    }
   }
 }

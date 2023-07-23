@@ -55,6 +55,8 @@
 }
 
 .intro__list {
+  margin: 0;
+
   @media #{$not-mobile} {
     display: flex;
     margin-inline: 50px;

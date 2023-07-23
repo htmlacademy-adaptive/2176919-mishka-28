@@ -137,9 +137,13 @@
     }
 
     @media #{$desktop-only} {
+      width: 1050px;
       height: 22px;
       background: url("../img/stack.svg#gray-stripe-desktop");
+      background-repeat: no-repeat;
       background-size: 1050px 23px;
+      left: 50%;
+      transform: translate(-50%);
     }
   }
 }

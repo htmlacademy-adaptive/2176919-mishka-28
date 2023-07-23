@@ -6,6 +6,7 @@ if (header) {
 }
 
 if (navToggle) {
+  navMain.classList.remove('main-navigation--opened');
   navToggle.addEventListener('click', function () {
     navMain.classList.toggle('main-navigation--opened');
   });

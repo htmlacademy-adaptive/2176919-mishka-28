@@ -1,0 +1,6 @@
+.main-index__contacts {
+  @media #{$desktop-only} {
+    inline-size: 1050px;
+    margin-inline: auto;
+  }
+}
