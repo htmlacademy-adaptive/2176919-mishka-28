@@ -14,7 +14,7 @@ if (navToggle) {
 
 const offerButton = document.querySelector('.special-offer__button');
 const modalContainer = document.querySelector('.modal');
-const cardButton = document.querySelector('.product-card__button');
+const cardButtons = document.querySelectorAll('.product-card__button');
 
 if (offerButton) {
   offerButton.addEventListener('click', (evt) => {
@@ -30,11 +30,11 @@ if (offerButton) {
   });
 }
 
-if (cardButton) {
-  cardButton.addEventListener('click', (evt) => {
+if (cardButtons) {
+  cardButtons.forEach((button) => button.addEventListener('click', (evt) => {
     evt.preventDefault();
     modalContainer.classList.remove('modal--close');
-  });
+  }));
 
   document.addEventListener('keydown', (evt) => {
     if (evt.key === 'Escape') {
