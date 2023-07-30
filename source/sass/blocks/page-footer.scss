@@ -10,14 +10,15 @@
   @media #{$not-mobile} {
     padding: 51px 0 58px 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 150px 1fr 1fr;
     justify-content: center;
     align-items: center;
-    column-gap: 50px;
+    column-gap: 30px;
   }
 
   @media #{$desktop-only} {
-    padding: 51px 0 58px 0;
+    grid-template-columns: 200px 1fr 1fr;
+    column-gap: 142px;
   }
 }
 
@@ -35,7 +36,7 @@
 .page-footer__social-list {
   @include reset-list;
   margin: 0;
-  padding: 25px 25px 28px 25px;
+  padding: 28px 25px 24px 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -46,6 +47,10 @@
   @media #{$not-mobile} {
     padding: 0;
     border: none;
+  }
+
+  @media #{$desktop-only} {
+    padding-top: 5px;
   }
 }
 

@@ -1,5 +1,5 @@
 .catalog-products__wrapper {
-  padding: 73px 20px;
+  padding: 74px 30px 73px 30px;
   background-color: $gray-back;
   text-align: center;
   margin-bottom: 30px;
@@ -7,13 +7,25 @@
   @media #{$not-mobile} {
     @include white-stripe;
     position: relative;
-    margin-bottom: 79px;
-    padding: 101px 20px 75px 20px;
+    margin-bottom: 68px;
+    padding: 101px 50px 85px 50px;
+  }
+
+  @media #{$tablet-only} {
+    &::after {
+      height: 31px;
+      background-size: auto;
+    }
   }
 
   @media #{$desktop-only} {
-    margin-bottom: 128px;
-    padding-bottom: 96px;
+    margin-bottom: 112px;
+    padding-bottom: 112px;
+
+    &::after {
+      background: url("../img/stack.svg#zigzag-fill-desktop-inner");
+      background-size: 1150px 34px;
+    }
   }
 }
 

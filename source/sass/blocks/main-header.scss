@@ -3,14 +3,15 @@
 }
 
 .main-header__container {
-  padding: 20px;
+  padding: 19px;
 
   @media #{$not-mobile} {
-    padding: 0 50px 0 50px;
+    padding: 0 50px 0 49px;
   }
 
   @media #{$desktop-only} {
-    @include centerer;
+    inline-size: 1050px;
+    margin-inline: auto;
     padding: 0;
   }
 }
@@ -47,12 +48,17 @@
   @media #{$not-mobile} {
     width: 113px;
     height: 46px;
+    align-self: flex-start;
+    padding-top: 22px;
+    margin-right: 50px;
   }
 
   @media #{$desktop-only} {
     width: 149px;
     height: 72px;
     grid-column: 2/3;
+    padding-top: 9px;
+    margin-bottom: 7px;
   }
 
   &[aria-current="page"] {
@@ -76,12 +82,12 @@
   &::before {
     content: "";
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 17px;
+    right: 11px;
     width: 20px;
     height: 2px;
     background-color: #000000;
-    box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+    box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
   }
 
   @media #{$not-mobile} {

@@ -1,15 +1,16 @@
 .intro {
-  padding: 83px 0 0 0;
+  padding: 73px 0 0 0;
   background-color: #f9f9f9;
   text-align: center;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: top -17px center;
   background-size: auto;
 
   @media #{$not-mobile} {
     background-image: url("../img/hero-tablet@1x.jpg");
-    padding-top: 154px;
+    background-position: top -1px center;
+    padding-top: 155px;
     position: relative;
 
     &::after {
@@ -33,6 +34,7 @@
       height: 34px;
       background: url("../img/stack.svg#zigzag-fill-desktop");
       background-size: 1250px 34px;
+      background-position: bottom center;
     }
   }
 }
@@ -46,7 +48,7 @@
   margin: 0 0 120px 0;
 
   @media #{$not-mobile} {
-    margin-bottom: 372px;
+    margin-bottom: 371px;
   }
 
   @media #{$desktop-only} {
@@ -59,6 +61,7 @@
 
   @media #{$not-mobile} {
     display: flex;
+    flex-wrap: wrap;
     margin-inline: 50px;
   }
 

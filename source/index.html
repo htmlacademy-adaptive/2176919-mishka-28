@@ -5,11 +5,15 @@
     <meta name="description" content="Сайт">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/script.min.js" as="script">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
-  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
-  <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/manifest.webmanifest">
   </head>
 
   <body class="page__body">
@@ -103,7 +107,7 @@
               <source type="image/webp" srcset="./img/triple-set-mobile@1x.webp 1x, ./img/triple-set-mobile@2x.webp 2x" width="260" height="315">
               <source media="(min-width: 1150px)" srcset="triple-set-desktop@1x.jpg 1x, triple-set-desktop@2x.jpg 2x" width="525" height="636">
               <source media="(min-width: 768px)" srcset="triple-set-tablet@1x.jpg 1x, triple-set-tablet@2x.jpg 2x" width="334" height="404">
-              <img class="special-offer__image" src="./img/triple-set-mobile@1x.jpg" srcset="./img/triple-set-mobile@2x.jpg" alt="Наши замечательные вязаные корзинки" width="260" height="315">
+              <img class="special-offer__image" src="./img/triple-set-mobile@1x.jpg" srcset="./img/triple-set-mobile@2x.jpg" alt="Наши замечательные вязаные корзинки." width="260" height="315">
             </picture>
           </a>
           <p class="special-offer__price">Цена: 990 руб.</p>
@@ -161,12 +165,12 @@
             <p class="contacts__address-title">e-mail:</p>
             <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
             <p class="contacts__address-title">адрес:</p>
-            <span class="contacts__text">Санкт-Петербург</span>
-            <span class="contacts__text">ул. Большая Конюшенная</span>
-            <span class="contacts__text"> д. 19/8, офис 101</span>
+            <span class="contacts__text">г.&nbsp;Санкт-Петербург ул.&nbsp;Большая Конюшенная д.&nbsp;19/8, офис&nbsp;101</span>
           </address>
         </div>
         <div class="contacts__map map map--nojs">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.220589117484!2d30.321494543621377!3d59.93885027402175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1690109611981!5m2!1sru!2sru" width="320" height="454" allowfullscreen loading="lazy" title="Офис компании по адресу Санкт-Петербург, ул. Большая конюшенная, д. 19/8, оф. 101.">
+          </iframe>
           <picture>
             <source media="(min-width: 1150px)" srcset="./img/map-desktop@1x.webp 1x, ./img/map-desktop@2x.webp 2x" width="527" height="457">
             <source media="(min-width: 768px)" srcset="./img/map-tablet@1x.webp 1x, ./img/map-tablet@2x.webp 2x" width="768" height="457">
@@ -217,7 +221,7 @@
           <span class="visually-hidden">Ссылка на интенсив по адаптивной верстке htmlacademy.</span>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__link-text">Разработано</span>
-            <svg class="copyright__link-icon" width="27" height="34">
+            <svg class="copyright__link-icon" width="35" height="36">
               <use href="./img/stack.svg#htmlacademy"></use>
             </svg>
           </a>

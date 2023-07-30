@@ -37,9 +37,14 @@
 .video__title {
   @include accent-text;
   margin: 0;
-  padding: 22px 34px 26px 34px;
+  padding: 23px 34px 26px 34px;
   order: -2;
   display: flex;
+  align-items: center;
+
+  @media #{$not-mobile} {
+    align-items: flex-start;
+  }
 
   &::before {
     content: "";
@@ -47,6 +52,11 @@
     height: 22px;
     background-image: url("../img/stack.svg#camera");
     margin-right: 25px;
+    flex-shrink: 0;
+
+    @media #{$not-mobile} {
+      margin-right: 33px;
+    }
 
     @media #{$desktop-only} {
       margin-bottom: 27px;
@@ -77,17 +87,19 @@
 
 .video__description {
   margin: 0;
-  padding: 35px 29px 41px 34px;
+  padding: 0 29px 41px 34px;
   font-size: 13px;
   line-height: 24px;
   color: $gray;
 
   @media #{$not-mobile} {
-    padding: 0 42px 40px 40px;
+    padding: 2px 42px 39px 40px;
+    font-size: 15px;
+    line-height: 30px;
   }
 
   @media #{$desktop-only} {
-    margin-bottom: 51px;
+    margin-bottom: 52px;
     padding: 0;
   }
 }
@@ -112,10 +124,15 @@
   transition: 0.3s;
   background-image: url("../img/stack.svg#play-button");
   background-repeat: no-repeat;
-  width: 101px;
-  height: 77px;
+  width: 106px;
+  height: 81px;
   background-color: transparent;
   border-color: transparent;
+
+  @media #{$not-mobile} {
+    width: 107px;
+    height: 82px;
+  }
 
   &:hover {
     transform: translate(-50%, -50%) scale(1.2);

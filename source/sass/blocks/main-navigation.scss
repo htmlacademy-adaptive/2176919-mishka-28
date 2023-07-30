@@ -5,11 +5,12 @@
   @media #{$not-mobile} {
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
 
   @media #{$desktop-only} {
     display: grid;
-    grid-template-columns: 1fr 150px 1fr;
+    grid-template-columns: 1fr 152px 1fr;
   }
 }
 
@@ -24,6 +25,9 @@
   }
 
   +.main-header__toggle-navigation {
+    top: 19px;
+    right: 15px;
+
     &::before,
     &::after {
       content: "";
@@ -71,10 +75,10 @@
 .main-navigation__list--main {
   @media #{$tablet-only} {
     position: absolute;
-    top: 75px;
-    left: 50px;
+    top: 100%;
+    left: 0;
     z-index: 1;
-    width: 50%;
+    width: 80%;
   }
 
   @media #{$desktop-only} {
@@ -86,10 +90,11 @@
     @media #{$tablet-only} {
       font-size: 15px;
       margin-right: 37px;
+      padding: 21px 0 0 0;
     }
 
     @media #{$desktop-only} {
-      margin-right: 69px;
+      margin-right: 71px;
     }
   }
 
@@ -99,7 +104,7 @@
       position: relative;
 
       &::after {
-        right: -33px;
+        right: -36px;
       }
     }
   }
@@ -117,14 +122,16 @@
   @media #{$desktop-only} {
     display: flex;
     position: absolute;
-    top: 75px;
+    top: 100%;
     z-index: 1;
+    width: 70%;
   }
 
   .main-navigation__link {
     @media #{$desktop-only} {
       font-size: 15px;
       margin-right: 61px;
+      padding: 20px 0 0 0;
     }
   }
 }
@@ -168,7 +175,7 @@
       content: "";
       width: 21px;
       height: 21px;
-      left: 25px;
+      left: 32px;
       background-color: rgba(0, 0, 0, 0.2);
     }
 
@@ -188,7 +195,7 @@
 
     @media #{$not-mobile} {
       @include vertical-striple;
-      width: 82px;
+      width: 83px;
 
       &::after {
         left: 0;
@@ -203,11 +210,15 @@
 
     @media #{$not-mobile} {
       @include vertical-striple;
-      padding-left: 79px;
+      padding-left: 84px;
 
       &::after {
         left: 0;
       }
+    }
+
+    @media #{$desktop-only} {
+      margin-right: 2px;
     }
   }
 }
@@ -219,14 +230,21 @@
 
   @media #{$not-mobile} {
     display: block;
+    text-align: end;
   }
 }
 
 .main-navigation__item--delivery {
   @media #{$not-mobile} {
     position: absolute;
-    top: 107px;
+    top: 100%;
     right: 0;
+    padding-top: 20px;
     z-index: 1;
+    width: 25%;
+  }
+
+  @media #{$not-mobile} {
+    width: 70%;
   }
 }

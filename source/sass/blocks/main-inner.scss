@@ -4,6 +4,10 @@
   @media #{$not-mobile} {
     margin-bottom: 64px;
   }
+
+  @media #{$desktop-only} {
+    margin-bottom: 105px;
+  }
 }
 
 .main-inner__order {
@@ -12,10 +16,13 @@
   margin: 0 34px 33px 34px;
 
   @media #{$not-mobile} {
-    margin-bottom: 46px;
+    margin: 0 42px 46px 42px;
   }
 
   @media #{$desktop-only} {
     margin: 0;
+    font-size: 17px;
+    line-height: 16px;
+    padding: 18px 20px 14px 20px;
   }
 }

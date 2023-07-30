@@ -16,7 +16,7 @@
 .modal__form {
   position: relative;
   margin: auto;
-  padding: 28px 30px 0 30px;
+  padding: 28px 29px 0 29px;
   width: 320px;
   border: solid 1px #c6c6c6;
   background-color: $white;
@@ -46,7 +46,7 @@
 }
 
 .modal__text {
-  margin: 0 0 21px 0;
+  margin: 0 0 23px 0;
   line-height: 30px;
 
   @media #{$not-mobile} {
@@ -84,7 +84,7 @@
   margin: 0;
   appearance: none;
   border-radius: 0;
-  padding: 18px 22px;
+  padding: 24px 22px;
   width: 82px;
   border: solid 2px rgb(68, 68, 68, 0.1);
   background-color: transparent;
@@ -109,7 +109,7 @@
 
 .modal__main-button {
   cursor: pointer;
-  padding: 18px;
+  padding: 16px;
   width: 100%;
   font-family: inherit;
   font-size: 17px;
@@ -123,12 +123,10 @@
 
   &:hover {
     background-color: #59d5bc;
-    padding-bottom: 23px;
-    margin-bottom: 41px;
   }
 
   &:active {
-    background-color: #59d5bc;
+    background-color: #56c3b2;
   }
 
   @media #{$not-mobile} {

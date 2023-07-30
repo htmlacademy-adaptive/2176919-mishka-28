@@ -43,3 +43,9 @@ if (cardButton) {
     }
   });
 }
+
+const map = document.querySelector('.map');
+
+if (map) {
+  map.classList.remove('map--nojs');
+}

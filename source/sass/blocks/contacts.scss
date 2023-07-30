@@ -1,12 +1,12 @@
 .contacts {
-  padding: 28px 0 39px 0;
+  padding: 44px 0 39px 0;
 
   @media #{$not-mobile} {
-    padding: 68px 0 57px 0;
+    padding: 86px 0 57px 0;
   }
 
   @media #{$desktop-only} {
-    padding: 101px 0 105px 0;
+    padding: 93px 0 105px 0;
     display: grid;
     grid-template-columns: 1fr 527px;
     align-items: start;
@@ -16,6 +16,10 @@
 
 .contacts__container {
   @include centerer;
+
+  @media #{$not-mobile} {
+    margin-bottom: 48px;
+  }
 
   @media #{$desktop-only} {
     inline-size: 524px;
@@ -31,22 +35,30 @@
   @media #{$not-mobile} {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 18px;
 
     &::after {
+      position: relative;
       content: "";
+      top: -23px;
+      right: 3px;
       width: 47px;
       height: 81px;
       background-image: url("../img/stack.svg#flag");
+      flex-shrink: 0;
     }
   }
 
   @media #{$desktop-only} {
+    margin-bottom: 11px;
     justify-content: flex-start;
-    padding-left: 63px;
+    padding: 80px 0 0 63px;
 
     &::after {
       order: -1;
       margin-right: 64px;
+      top: -18px;
+      right: 0;
     }
   }
 }
@@ -58,28 +70,45 @@
   line-height: 30px;
   color: $gray;
   display: grid;
-  grid-template-columns: 76px 1fr;
+  grid-template-columns: 70px 1fr;
+  align-items: start;
+  column-gap: 8px;
 
   @media #{$tablet-only} {
-    grid-template-columns: 78px 256px 78px 1fr;
+    grid-template-columns: 70px 247px 70px 1fr;
+    grid-auto-flow: dense;
+    margin: 0;
+  }
+
+  @media #{$not-mobile} {
     font-size: 17px;
   }
 
   @media #{$desktop-only} {
     padding-left: 174px;
+    padding-right: 15px;
   }
 }
 
 .contacts__address-title {
   padding: 0;
   margin: 0;
+
+  ~.contacts__address-title {
+    margin-bottom: 10px;
+  }
 }
 
 .contacts__link {
   @include link;
   text-decoration: underline solid 1px $light-green-decorative;
   text-underline-offset: 5px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
+  grid-column: 2/3;
+
+  @media #{$not-mobile} {
+    text-underline-offset: 8px;
+  }
 
   &:hover {
     color: #46c1ae;
@@ -94,6 +123,14 @@
   @media #{$tablet-only} {
     grid-column: 2/3;
     margin: 0;
+  }
+
+  @media #{$desktop-only} {
+    text-underline-offset: 13px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -113,6 +150,16 @@
   @media #{$not-mobile} {
     width: 230px;
     margin: 0 auto;
+    font-size: 17px;
+  }
+
+  @media #{$desktop-only} {
+    align-self: end;
+    margin-left: 175px;
+  }
+
+  ~.contacts__feedback {
+    margin-top: 10px;
   }
 }
 

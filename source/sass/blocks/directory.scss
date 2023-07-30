@@ -8,7 +8,7 @@
   position: relative;
   display: flex;
   width: 100%;
-  padding: 24px 30px 31px 30px;
+  padding: 24px 25px 17px 30px;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
@@ -26,15 +26,23 @@
   }
 
   &:hover {
-    padding: 19px 30px 36px 30px;
+    padding: 19px 25px 22px 30px;
+
+    @media #{$tablet-only} {
+      padding: 21px 25px 47px 36px;
+    }
+
+    @media #{$desktop-only} {
+      padding: 21px 26px 52px 36px;
+    }
   }
 
   @media #{$not-mobile} {
-    padding: 25px 33px 34px 36px;
+    padding: 26px 25px 42px 36px;
   }
 
   @media #{$desktop-only} {
-    padding: 25px 35px 45px 37px;
+    padding: 26px 26px 47px 36px;
   }
 
   &::after {
@@ -43,6 +51,7 @@
     height: 62px;
     background-repeat: no-repeat;
     opacity: 0.5;
+    flex-shrink: 0;
   }
 
   &:hover::after {
@@ -51,18 +60,6 @@
 
   &:active::after {
     opacity: 0.3;
-  }
-
-  &:nth-child(even) {
-    background-color: $green;
-
-    &:hover {
-      background-color: #46c1ae;
-    }
-
-    &:active {
-      background-color: #46c1ae;
-    }
   }
 
   @media #{$not-mobile} {
@@ -82,6 +79,10 @@
     &:active {
       background-color: #59d5bc;
     }
+
+    .directory__link:hover::before {
+      background-color: #59d5bc;
+    }
   }
 
   &:nth-child(even) {
@@ -94,33 +95,40 @@
     &:active {
       background-color: #46c1ae;
     }
+
+    .directory__link:hover::before {
+      background-color: #46c1ae;
+    }
   }
 
   @media #{$not-mobile} {
-    width: 100%;
+    width: 50%;
   }
 }
 
 .directory__item--interior-items {
-  .directory__link {
-    &::before {
-      background-color: #59d5bc;
-    }
+  .directory__link::after {
+    background-image: url("../img/stack.svg#lamp");
+  }
 
-    &::after {
-      background-image: url("../img/stack.svg#lamp");
+  @media #{$not-mobile} {
+    .directory__link::after {
+      position: relative;
+      top: 4px;
     }
   }
 }
 
 .directory__item--kids-toys {
-  .directory__link {
-    &::before {
-      background-color: #46c1ae;
-    }
+  .directory__link::after {
+    background-image: url("../img/stack.svg#lego");
+  }
 
-    &::after {
-      background-image: url("../img/stack.svg#lego");
+  @media #{$not-mobile} {
+    .directory__link::after {
+      position: relative;
+      top: 5px;
+      right: 8px;
     }
   }
 }
