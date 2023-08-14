@@ -1,0 +1,250 @@
+.main-navigation {
+  display: flex;
+  justify-content: center;
+
+  @media #{$not-mobile} {
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  @media #{$desktop-only} {
+    display: grid;
+    grid-template-columns: 1fr 152px 1fr;
+  }
+}
+
+.main-navigation--opened {
+  .main-navigation__wrapper {
+    display: block;
+    position: absolute;
+    top: 79px;
+    background-color: $white;
+    width: 100%;
+    z-index: 1;
+  }
+
+  +.main-header__toggle-navigation {
+    top: 19px;
+    right: 15px;
+
+    &::before,
+    &::after {
+      content: "";
+      left: 0;
+      top: 50%;
+      position: absolute;
+      width: 28px;
+      height: 2px;
+      background-color: #000000;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.main-navigation__wrapper {
+  display: none;
+
+  @media #{$not-mobile} {
+    display: block;
+  }
+
+  @media #{$desktop-only} {
+    display: contents;
+  }
+}
+
+.main-navigation__list {
+  @include reset-list;
+  margin: 0;
+
+  @media #{$not-mobile} {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.main-navigation__list--main {
+  @media #{$tablet-only} {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: 80%;
+  }
+
+  @media #{$desktop-only} {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .main-navigation__link {
+    @media #{$tablet-only} {
+      font-size: 15px;
+      margin-right: 37px;
+      padding: 21px 0 0 0;
+    }
+
+    @media #{$desktop-only} {
+      margin-right: 71px;
+    }
+  }
+
+  .main-navigation__link--stripe {
+    @media #{$desktop-only} {
+      @include vertical-striple;
+      position: relative;
+
+      &::after {
+        right: -36px;
+      }
+    }
+  }
+}
+
+.main-navigation__search {
+  @media #{$not-mobile} {
+    display: none;
+  }
+}
+
+.main-navigation__list--hidden {
+  display: none;
+
+  @media #{$desktop-only} {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    width: 70%;
+  }
+
+  .main-navigation__link {
+    @media #{$desktop-only} {
+      font-size: 15px;
+      margin-right: 61px;
+      padding: 20px 0 0 0;
+    }
+  }
+}
+
+.main-navigation__link {
+  @include link;
+  padding: 28px 0 26px 76px;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  border-top: solid 1px #ececec;
+
+  @media #{$not-mobile} {
+    border-top: none;
+    padding: 33px 0 31px 0;
+  }
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-navigation__list--user-navigation {
+  position: relative;
+
+  @media #{$desktop-only} {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    justify-self: end;
+  }
+
+  .main-navigation__link {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 21px;
+      height: 21px;
+      left: 32px;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:hover::before {
+      background-color: $light-green;
+    }
+
+    &:active::before {
+      background-color: $light-green;
+    }
+  }
+
+  .main-navigation__link--search {
+    &::before {
+      mask-image: url("../img/stack.svg#search");
+    }
+
+    @media #{$not-mobile} {
+      @include vertical-striple;
+      width: 83px;
+
+      &::after {
+        left: 0;
+      }
+    }
+  }
+
+  .main-navigation__link--cart {
+    &::before {
+      mask-image: url("../img/stack.svg#cart");
+    }
+
+    @media #{$not-mobile} {
+      @include vertical-striple;
+      padding-left: 84px;
+
+      &::after {
+        left: 0;
+      }
+    }
+
+    @media #{$desktop-only} {
+      margin-right: 2px;
+    }
+  }
+}
+
+.main-navigation__delivery {
+  display: none;
+  color: $gray;
+  margin: 0;
+
+  @media #{$not-mobile} {
+    display: block;
+    text-align: end;
+  }
+}
+
+.main-navigation__item--delivery {
+  @media #{$not-mobile} {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding-top: 20px;
+    z-index: 1;
+    width: 25%;
+  }
+
+  @media #{$not-mobile} {
+    width: 70%;
+  }
+}

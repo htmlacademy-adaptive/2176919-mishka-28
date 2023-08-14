@@ -1,0 +1,210 @@
+@mixin centerer {
+  margin-inline: 30px;
+
+  @media #{$not-mobile} {
+    margin-inline: 50px;
+  }
+
+  @media #{$desktop-only} {
+    inline-size: 1050px;
+    margin-inline: auto;
+  }
+}
+
+@mixin reset-list {
+  padding: 0;
+  list-style: none;
+}
+
+@mixin img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@mixin link {
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin main-title {
+  font-size: 27px;
+  line-height: 30px;
+
+  @media #{$not-mobile} {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media #{$desktop-only} {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+@mixin accent-text {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+
+  @media #{$not-mobile} {
+    font-size: 20px;
+  }
+}
+
+@mixin button {
+  cursor: pointer;
+  border: solid 2px $gray;
+  padding: 14px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $gray;
+  background-color: $white;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover {
+    background-color: $gray;
+    color: $white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@mixin shape {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@mixin footer-shape {
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    color: #46c1ae;
+    opacity: 0.3;
+  }
+}
+
+@mixin input-shape {
+  border-radius: 0;
+
+  &:hover,
+  &:focus {
+    border-color: $light-green-decorative;
+    outline: none;
+
+    +.form__title::before {
+      background-color: $light-green-decorative;
+    }
+  }
+}
+
+@mixin gray-stripe {
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: url("../img/stack.svg#gray-stripe-mobile");
+    background-position: bottom;
+    background-size: 320px 6px;
+    background-repeat: repeat-x;
+
+    @media #{$not-mobile} {
+      height: 16px;
+      background: url("../img/stack.svg#gray-stripe-table");
+      background-size: 772px 17px;
+    }
+
+    @media #{$desktop-only} {
+      width: 1050px;
+      height: 22px;
+      background: url("../img/stack.svg#gray-stripe-desktop");
+      background-repeat: no-repeat;
+      background-size: 1050px 23px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+}
+
+@mixin white-stripe {
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background: url("../img/stack.svg#zigzag-fill-tablet");
+    background-position: bottom;
+    background-size: 770px 24px;
+  }
+
+  @media #{$desktop-only} {
+    &::after {
+      height: 34px;
+      background: url("../img/stack.svg#zigzag-fill-desktop");
+      background-size: 1250px 34px;
+    }
+  }
+}
+
+@mixin green-stripe {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $light-green-decorative;
+    margin-left: 23px;
+  }
+}
+
+@mixin arrow-shaft {
+  content: "";
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 4px;
+  background-color: #000000;
+  transform: translateX(-19px);
+}
+
+@mixin arrowhead {
+  content: "";
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  border-left: solid 4px #000000;
+  border-top: solid 4px #000000;
+  transform: rotate(-45deg);
+}
+
+@mixin vertical-striple {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 88px;
+    background-color: rgba(0, 0, 0, 0.1);
+    top: 0;
+  }
+}
