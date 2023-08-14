@@ -59,7 +59,7 @@
     padding: 28px 27px 25px 27px;
     border: solid 1px #ececec;
     border-top: none;
-    min-height: 197px;
+    height: 100%;
   }
 }
 
@@ -80,7 +80,7 @@
   }
 
   @media #{$desktop-only} {
-    margin: 0;
+    margin: 0 0 11px 0;
   }
 }
 
