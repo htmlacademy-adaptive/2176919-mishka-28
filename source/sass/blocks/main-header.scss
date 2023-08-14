@@ -1,9 +1,30 @@
 .main-header {
-  border-bottom: solid 1px #ececec;
+  background: linear-gradient($white 88px, #f9f9f9 88px);
+  position: relative;
+
+  @media #{$not-mobile} {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.1);
+      top: 88px;
+      left: 0;
+    }
+  }
+}
+
+.main-header--inner {
+  background: linear-gradient($white 88px, #f1f1f1 88px);
 }
 
 .main-header__container {
   padding: 19px;
+
+  @media #{$mobile-only} {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  }
 
   @media #{$not-mobile} {
     padding: 0 50px 0 49px;
