@@ -14,37 +14,39 @@
 }
 
 .main-navigation--opened {
-  .main-navigation__wrapper {
-    display: block;
-    position: absolute;
-    top: 79px;
-    background-color: $white;
-    width: 100%;
-    z-index: 1;
-  }
-
-  +.main-header__toggle-navigation {
-    top: 19px;
-    right: 15px;
-
-    &::before,
-    &::after {
-      content: "";
-      left: 0;
-      top: 50%;
+  @media #{$mobile-only} {
+    .main-navigation__wrapper {
+      display: block;
       position: absolute;
-      width: 28px;
-      height: 2px;
-      background-color: #000000;
+      top: 79px;
+      background-color: $white;
+      width: 100%;
+      z-index: 1;
     }
 
-    &::before {
-      transform: rotate(45deg);
-      box-shadow: none;
-    }
+    +.main-header__toggle-navigation {
+      top: 19px;
+      right: 15px;
 
-    &::after {
-      transform: rotate(-45deg);
+      &::before,
+      &::after {
+        content: "";
+        left: 0;
+        top: 50%;
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background-color: #000000;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
     }
   }
 }
