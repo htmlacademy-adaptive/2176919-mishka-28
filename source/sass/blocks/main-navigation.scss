@@ -3,9 +3,8 @@
   justify-content: center;
 
   @media #{$not-mobile} {
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   @media #{$desktop-only} {
@@ -54,10 +53,6 @@
   display: none;
 
   @media #{$not-mobile} {
-    display: block;
-  }
-
-  @media #{$desktop-only} {
     display: contents;
   }
 }
@@ -74,11 +69,9 @@
 
 .main-navigation__list--main {
   @media #{$tablet-only} {
-    position: absolute;
-    top: 100%;
-    left: 0;
     z-index: 1;
-    width: 70%;
+    grid-column: 1/4;
+    grid-row: 2/3;
   }
 
   @media #{$desktop-only} {
@@ -159,10 +152,15 @@
 .main-navigation__list--user-navigation {
   position: relative;
 
+  @media #{$not-mobile} {
+    grid-column: 2/5;
+    grid-row: 1/2;
+    justify-self: end;
+  }
+
   @media #{$desktop-only} {
     grid-column: 3/4;
     grid-row: 1/2;
-    justify-self: end;
     align-self: flex-start;
   }
 

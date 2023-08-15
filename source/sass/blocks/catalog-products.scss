@@ -8,12 +8,12 @@
     @include white-stripe;
     position: relative;
     margin-bottom: 68px;
-    padding: 101px 50px 85px 50px;
+    padding: 57px 50px 85px 50px;
   }
 
   @media #{$tablet-only} {
     &::after {
-      height: 31px;
+      height: 25px;
       background-size: auto;
     }
   }
